@@ -25,6 +25,11 @@
         Preview: Themes Option\10.Preview\Theme Color\1.PureBlack.jpg
         Files:
           - Themes Option\2.Interface\ThemeColors\1.PureBlack.xaml
+      Solaris:
+        Name: Solaris Inspired
+        FilterValue: Standard
+        Files:
+          - Themes Option\2.Interface\ThemeColors\44.Solaris.xaml
       GoldenDark:
         Name: Golden Dark
         FilterValue: Standard
