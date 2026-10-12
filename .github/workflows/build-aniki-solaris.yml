@@ -1,0 +1,36 @@
+name: Build Aniki Solaris test package
+
+on:
+  push:
+    branches:
+      - feature/aniki-solaris
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-and-package:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install YAML parser
+        run: python -m pip install --disable-pip-version-check pyyaml
+
+      - name: Validate XAML and theme settings
+        run: python scripts/validate_aniki_solaris.py
+
+      - name: Upload test package
+        uses: actions/upload-artifact@v4
+        with:
+          name: Aniki-Solaris-test-build
+          path: dist/Aniki-Solaris-test-build.pthm
+          if-no-files-found: error
+          retention-days: 14
