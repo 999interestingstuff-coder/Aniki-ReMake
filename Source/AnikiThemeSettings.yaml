@@ -1382,6 +1382,11 @@
       Default:
         Name: Exo 2
         Preview: Themes Option\10.Preview\Font\Exo2.jpg
+      SolarisSans:
+        Name: Solaris Sans (Roboto Condensed)
+        Preview: Themes Option\\10.Preview\\Font\\RobotoCondensed.jpg
+        Files:
+          - Themes Option\\9.Fonts\\FontRoboto.xaml
       SegoeUI:
         Name: SegoeUI
         Preview: Themes Option\10.Preview\Font\SegoeUI.jpg
