@@ -15,6 +15,11 @@ jobs:
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            Source
+            scripts/validate_aniki_solaris.py
+          sparse-checkout-cone-mode: false
 
       - name: Set up Python
         uses: actions/setup-python@v5
